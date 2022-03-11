@@ -1,8 +1,9 @@
 var klikkeKnappEl = document.getElementById("klikkeknapp");
 var utskriftEl = document.getElementById("utskrift");
+var skjultPoengEl = document.getElementById("poeng");
+
 var oppgradering1El = document.getElementById("oppgradering1");
 var oppgradering2El = document.getElementById("oppgradering2");
-
 
 klikkeKnappEl.addEventListener("click", beregnKlikk);
 oppgradering1El.addEventListener("click", oekPoengPerKlikkMed1)
@@ -14,10 +15,13 @@ var poengPerKlikk = 1;
 function beregnKlikk(e) {
     antallKlikk = antallKlikk + poengPerKlikk;
     utskriftEl.innerHTML = "Du har klikket " + antallKlikk + " ganger.";
+    console.log(antallKlikk);
+    skjultPoengEl.value = antallKlikk;
 
 }
 
 function oekPoengPerKlikkMed1(e) {
+    console.log(skjultPoengEl.value);
     if (antallKlikk > 99) {
         antallKlikk = antallKlikk - 100;
         poengPerKlikk = poengPerKlikk + 100;

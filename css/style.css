@@ -3,3 +3,19 @@
     height: 70px;
     border-radius: 5px;
 }
+
+#inputForm {
+    margin-top: 50px;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+}
+
+.item {
+    border: 2px black solid;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 10px;
+}
